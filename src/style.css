@@ -54,6 +54,10 @@ body {
 .header-h1__modal{
     color: #c4c434;
 }
+.header-h4{
+  margin-top: 10px;
+  color: #c4c434;
+}
 /*Código copiado.. */
 @keyframes firework {
   0% { transform: translate(var(--x), var(--initialY)); width: var(--initialSize); opacity: 1; }

@@ -24,7 +24,7 @@ const spinSelection = ((userSelection) => {
     else mensaje = 'You win.';
 
 
-    document.getElementById('result').innerText = 'The result is: ';
+    document.getElementById('results').innerText = 'The result is: ';
     document.getElementById('computerSelection').innerText = 'The computer select: ' + Object.keys(rules)[computerSelection];
     document.getElementById('result').innerText = mensaje;
 
