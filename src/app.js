@@ -19,20 +19,29 @@ const spinSelection = ((userSelection) => {
     }
     let mensaje = ''
     let computerSelection = Math.floor(Math.random() * choises.length)
-    if (userSelection === Object.keys(rules)[computerSelection]) mensaje = 'Empate'
-    else if (rules[choises[computerSelection]].includes(userSelection)) mensaje = ' 🎊 Ganaste';
-    else mensaje ='perdiste';
+    if (userSelection === Object.keys(rules)[computerSelection]) mensaje = 'You tied'
+    else if (rules[choises[computerSelection]].includes(userSelection)) mensaje = 'You Lose.';
+    else mensaje = 'You win.';
+
+
+    document.getElementById('result').innerText = 'The result is: ';
     document.getElementById('computerSelection').innerText = 'The computer select: ' + Object.keys(rules)[computerSelection];
     document.getElementById('result').innerText = mensaje;
 
+    const fireworks = document.querySelectorAll('#firework .firework');
+    if (mensaje === 'You win.') {
+        fireworks.forEach(fw => fw.classList.remove('d-none'));
+    }else{
+        fireworks.forEach(fw => fw.classList.add('d-none'));
+    }
 })
 
 const buttons = document.querySelectorAll('#lizardSpock button');
 
 buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
-        
-        const valorJugador = event.currentTarget.value;
-        spinSelection(valorJugador);
+
+        const userSelections = event.currentTarget.value;
+        spinSelection(userSelections);
     });
 });

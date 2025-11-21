@@ -11,6 +11,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
   <!--Link de Google font para formato de letra-->
+  <!--Font-Awesome-->
+  <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,18 +27,58 @@
   <section class="container ">
     <div class="row d-flex justify-content-around" id="lizardSpock">
       <h2 class=" selection text-center">Select an option</h2>
-      <button class="btn btn-outline-light col-2 color"  value="rock">🪨 Rock</button>
-      <button class="btn btn-outline-light col-2 color"  value="paper">📄 Paper</button>
-      <button class="btn btn-outline-light col-2 color"  value="scissors">✂ Scissors</button>
-      <button class="btn btn-outline-light col-2 color"  value="lizard">🦎Lizard</button>
-      <button class="btn btn-outline-light col-2 color"  value="spock">🖖🏻 Spock</button>
+      <button class="btn btn-outline-light col-2 color" value="rock">🪨 Rock</button>
+      <button class="btn btn-outline-light col-2 color" value="paper">📄 Paper</button>
+      <button class="btn btn-outline-light col-2 color" value="scissors">✂ Scissors</button>
+      <button class="btn btn-outline-light col-2 color" value="lizard">🦎Lizard</button>
+      <button class="btn btn-outline-light col-2 color" value="spock">🖖🏻 Spock</button>
     </div>
   </section>
   <section class="container d-flex justify-content-center w-75">
-    <div class="container-texto w-100 mt-4 d-flex justify-content-center align-items-center flex-column">
-      <p id="computerSelection" class="box-text"></p>
+    <div class="container-texto w-100 mt-4 p-3 d-flex justify-content-center align-items-center flex-column">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-outline-light col-2 color" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">
+        RULES
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark">
+            <div class="modal-header d-flex justify-content-between bg-dark">
+              <h1 class="modal-title fs-5 header-h1__modal">Rules of the game:</h1>
+              <button type="button" class="btn box-text" data-bs-dismiss="modal" aria-label="Close"><i
+                  class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+              <p class="box-text"><i class="fa-solid fa-hand-back-fist mx-1"></i> Rock beats lizard by crushing it, and
+                scissors by crushing them.</p>
+              <p class="box-text"><i class="fa-solid fa-hand mx-1"></i> Paper wins by discrediting Spock and rock by
+                wrapping
+                it up.</p>
+              <p class="box-text"><i class="fa-solid fa-hand-scissors mx-1"></i> Scissors beats lizard by decapitating
+                it and
+                paper by cutting it.</p>
+              <p class="box-text"><i class="fa-solid fa-hand-lizard mx-1"></i> Lizard defeats Spock by poisoning and
+                paper by
+                devouring him.</p>
+              <p class="box-text"><i class="fa-solid fa-hand-spock mx-1"></i> Spock defeats rock by vaporizing it and
+                scissors
+                by breaking them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p id="computerSelection" class="box-text mt-2"></p>
       <p id="result" class="box-text"></p>
     </div>
+    <div id="firework">
+      <div class="firework d-none"></div>
+      <div class="firework d-none"></div>
+      <div class="firework d-none"></div>
+    </div>
+
 
   </section>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -42,4 +86,5 @@
     crossorigin="anonymous"></script>
   <script src="app.js"></script>
 </body>
+
 </html>
