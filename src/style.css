@@ -1,5 +1,51 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
+/* Clases principales */
 
-body{
-    background: white;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.header {
+    background-color: black;
+    height: auto;
+}
+
+.header-h1 {
+    color: #c4c434;
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    padding: 10px;
+}
+
+.selection {
+    color: #c4c434;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.color {
+    color: #c4c434;
+    border-color: #c4c434;
+}
+
+.color:hover {
+    background-color: #c4c434;
+    border-color: #c4c434;
+}
+
+.container-texto {
+    border: 1px solid #c4c434;
+    height: 300px;
+
+}
+
+.box-text{
+    color:#c4c434;
 }
