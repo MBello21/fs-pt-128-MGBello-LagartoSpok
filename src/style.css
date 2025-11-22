@@ -1,5 +1,4 @@
 /* Clases principales */
-
 * {
     margin: 0;
     padding: 0;
@@ -40,7 +39,10 @@ body {
     background-color: #c4c434;
     border-color: #c4c434;
 }
-
+.color:active {
+    background-color: #c4c434;
+    border-color: #c4c434;
+}
 .container-texto {
     border: 1px solid #c4c434;
     height: auto;
@@ -58,7 +60,7 @@ body {
   margin-top: 10px;
   color: #c4c434;
 }
-/*Código copiado.. */
+/*Código copiado https://esdev.blog/fuegos-artificiales-animados-con-css-ef69cef303ab*/
 @keyframes firework {
   0% { transform: translate(var(--x), var(--initialY)); width: var(--initialSize); opacity: 1; }
   50% { width: 0.5vmin; opacity: 1; }
