@@ -17,23 +17,19 @@ const spinSelection = ((userSelection) => {
         lizard: ["spock", "paper"],
         spock: ["scissors", "rock"]
     }
-    let mensaje = ''
+    let message = ''
     let computerSelection = Math.floor(Math.random() * choises.length)
-    if (userSelection === Object.keys(rules)[computerSelection]) mensaje = 'You tied'
-    else if (rules[choises[computerSelection]].includes(userSelection)) mensaje = 'You Lose.';
-    else mensaje = 'You win.';
+    if (userSelection === Object.keys(rules)[computerSelection]) message = 'You tied'
+    else if (rules[choises[computerSelection]].includes(userSelection)) message = 'You Lose.';
+    message = 'You win.';
 
     //Inserción de texto mediante ID's para ver que eligio el ordenador y si hemos ganado, empatado o perdido
     document.getElementById('results').innerText = 'The result is: ';
     document.getElementById('computerSelection').innerText = 'The computer select: ' + Object.keys(rules)[computerSelection];
-    document.getElementById('result').innerText = mensaje;
+    document.getElementById('result').innerText = message;
 
-    //Aunque el codigo de los Fuegos artificiales a sido copiado (HTML y CSS) aañadimos esta funcion para que solo se muestre 
-    //si se gana, creamos una constante que selecione todos los componentes con el id firework y la clase firework, para remover o 
-    //añadir o quitar el display none, como son varios fuegos artificiales usamos un forEach para recorrer todos los div con la clase
-    //firework y que quite a cada fuego artificial el d-none
     const fireworks = document.querySelectorAll('#firework .firework');
-    if (mensaje === 'You win.') {
+    if (message === 'You win.') {
         fireworks.forEach(fire => fire.classList.remove('d-none'));
     } else {
         fireworks.forEach(fire => fire.classList.add('d-none'));
