@@ -21,7 +21,7 @@ const spinSelection = ((userSelection) => {
     let computerSelection = Math.floor(Math.random() * choises.length)
     if (userSelection === Object.keys(rules)[computerSelection]) message = 'You tied'
     else if (rules[choises[computerSelection]].includes(userSelection)) message = 'You Lose.';
-    message = 'You win.';
+    else message = 'You win.';
 
     //Inserción de texto mediante ID's para ver que eligio el ordenador y si hemos ganado, empatado o perdido
     document.getElementById('results').innerText = 'The result is: ';
