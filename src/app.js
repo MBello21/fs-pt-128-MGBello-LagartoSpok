@@ -37,12 +37,14 @@ const spinSelection = ((userSelection) => {
 })
 
 //Hacemos algo similar a lo anterior pero con distintos values en HTML, para obtener la eleccion por botones del usuario
-const buttons = document.querySelectorAll('#lizardSpock button');
-//Con forEach recorremos cada boton para poder añadirle el addEventListener-> click para escuchar o ver el evento del click en el boton
-buttons.forEach((button) => {
-    button.addEventListener('click', (event) => {
-
-        const userSelections = event.currentTarget.value;
-        spinSelection(userSelections);
+windows.onload= function () {
+    const buttons = document.querySelectorAll('#lizardSpock button');
+    //Con forEach recorremos cada boton para poder añadirle el addEventListener-> click para escuchar o ver el evento del click en el boton
+    buttons.forEach((button) => {
+        button.addEventListener('click', (event) => {
+    
+            const userSelections = event.currentTarget.value;
+            spinSelection(userSelections);
+        });
     });
-});
+}
